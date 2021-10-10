@@ -1,17 +1,45 @@
 import { StyleSheet } from "react-native";
-export default StyleSheet.create({
+
+const base_style = StyleSheet.create({
     container: {
         padding: 10,
         marginHorizontal: 40,
-        marginVertical: 20,
-        backgroundColor: "#2286c3",
+        marginTop: 20,
         borderRadius: 25,
         alignItems: "center"
     },
     title: {
         fontWeight: "bold",
         fontSize: 17,
-        color: "white"
-    },
 
+    },
 })
+export default {
+    primary: StyleSheet.create({
+        ...base_style,
+        container: {
+            ...base_style.container,
+            backgroundColor: "#2286c3",
+        },
+        title: {
+            ...base_style.title,
+            color: "white"
+        },
+
+    }),
+    secondary: StyleSheet.create({
+        ...base_style,
+        container: {
+            ...base_style.container,
+            backgroundColor: "white",
+            borderColor: "#2286c3",
+            borderWidth: 2,
+
+        },
+        title: {
+            ...base_style.title,
+            color: "#2286c3"
+        },
+
+    })
+}
