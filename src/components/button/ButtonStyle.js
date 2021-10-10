@@ -1,10 +1,10 @@
 import { StyleSheet } from "react-native";
-
+import colors from "../../assets/styles/colors";
 const base_style = StyleSheet.create({
     container: {
         padding: 10,
         marginHorizontal: 40,
-        marginTop: 20,
+        marginTop: 10,
         borderRadius: 25,
         alignItems: "center"
     },
@@ -19,7 +19,7 @@ export default {
         ...base_style,
         container: {
             ...base_style.container,
-            backgroundColor: "#2286c3",
+            backgroundColor: colors.buttonblue,
         },
         title: {
             ...base_style.title,
@@ -32,13 +32,13 @@ export default {
         container: {
             ...base_style.container,
             backgroundColor: "white",
-            borderColor: "#2286c3",
+            borderColor: colors.buttonblue,
             borderWidth: 2,
 
         },
         title: {
             ...base_style.title,
-            color: "#2286c3"
+            color: colors.buttonblue
         },
 
     })
